@@ -18,7 +18,14 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	
 	<script>
-	
+		$(document).ready(function() {
+
+			/* 메뉴 버튼 이벤트 */
+			$(".menuBtn").click(function() {
+				$(".menuContainer").stop().animate({width:"toggle", right:"toggle"});
+			});
+
+		});
 	</script>
 	<style>
 	
@@ -27,9 +34,35 @@
 <body>
 <form>
 	<div class="pageheader">
-		<div class="logo">Dlog 262</div>
-		<div class="description">MAKING AND DEVELOP</div>
-		<div class="btnMenu"><i class="fas fa-bars"></i></div>
+		<table class="headerlayout">
+			<colgroup>
+				<col width="" />
+				<col width="" />
+				<col width="" />
+			</colgroup>
+			<tr>
+				<td class="aleft">
+					<div class="logo">Dlog 262</div>
+					<div class="description">MAKING AND DEVELOP</div>
+				</td>
+				<td class="aright">
+					<div class="menuBtn"><i class="fas fa-bars"></i></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="menuContainer">
+		<div class="inner">
+			<table>
+				<tr><td class="menuHome"><i class="fas fa-home" title="Home"></i></td></tr>
+				<tr><td class="menuItem">Web Develop</td></tr>
+				<tr><td class="menuItem">3D Pen Gallary</td></tr>
+				<tr><td class="menuItem">Travel Picture</td></tr>
+				<tr><td class="menuItem">Game</td></tr>
+				<tr><td class="menuItem">Review</td></tr>
+			</table>
+		</div>
 	</div>
 	
 	<div class="pagecontet">

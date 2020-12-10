@@ -9,9 +9,13 @@
 
 * {font-family: sans-serif;}
 html, body, form {height: 100%;}
-body {margin: 0px; padding: 0px; }
+body {margin: 0px; padding: 0px; overflow: hidden; }
 form {margin: 0px; padding: 0px; background-image: linear-gradient(142deg, #FAF4C0, #DAD9FF 31%, #D9E5FF 65%, #D1B2FF);}
+table {border-collapse: collapse;}
 
+.aleft { text-align: left !important; }
+.acenter { text-align: center !important; }
+.aright { text-align: right !important; }
 
 .pageheader {
 	margin: 0px 3%;
@@ -21,9 +25,12 @@ form {margin: 0px; padding: 0px; background-image: linear-gradient(142deg, #FAF4
 .pagecontent { }
 .pagefooter { }
 
-
-.container {}
-
+.headerlayout {
+	width: 100%;
+}
+.headerlayout td {
+	vertical-align: bottom;
+}
 .logo {
 	padding-top: 0.5em;
 	padding-left: 0.2em;
@@ -33,17 +40,62 @@ form {margin: 0px; padding: 0px; background-image: linear-gradient(142deg, #FAF4
 	cursor: pointer;
 }
 .description {
-	padding-left: 10px;
-    margin-top: -15px;
-    margin-left: 3em;
+	margin-left: 1em;
     font-family: 'Logo-font';
     font-size: 1em;
 	display: inline-block;
 	cursor: default;
 }
-.btnMenu {
-	float: right;
-	position: relative;
-	top: 2em;
+.menuBtn {
+	margin-right: 0.2em;
+	margin-bottom: 2px;
+	font-size: 1.3em;
 	cursor: pointer;
+}
+.menuContainer {
+	max-width: 50%;
+	height: 100%;
+	position: absolute;
+	top: auto;
+	right: 0px;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+}
+/* @media screen and (max-width:512px) {
+	.menuContainer {
+		width: 40%;
+	}
+}
+@media screen and (max-width:1024px) {
+	.menuContainer {
+		width: 40%;
+	}
+} */
+
+.menuContainer .inner {
+    margin: 0.5em 0em 0em 0.5em;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 0.5em 0em 0em 0em;
+}
+.menuContainer table { width: 100%; border-radius: 0.5em 0em 0em 0em; }
+.menuContainer table td { 
+	padding: 1em 0.8em;
+	border: 1px solid rgba(0, 0, 0, 0.1); 
+	border-left: none;
+	border-right: none;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.menuContainer table td:first-child {
+	border-top: 1px solid rgba(0, 0, 0, 0);
+}
+.menuContainer table td:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.menuContainer .menuHome {
+	border-radius: 0.5em 0em 0em 0em;
+}
+.menuContainer .menuItem {
+	
 }
